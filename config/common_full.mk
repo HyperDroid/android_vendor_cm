@@ -15,7 +15,5 @@ include vendor/cm/config/cm_audio.mk
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
-    NoiseField \
-    LiveWallpapersPicker \
-    PhaseBeam
+    LiveWallpapersPicker
 

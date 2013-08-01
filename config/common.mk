@@ -61,8 +61,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
@@ -132,6 +130,34 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
+# HyperDroidAOXP
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/AOXP/addon.d/70-gapps.sh:system/addon.d/70-gapps.sh \
+    vendor/cm/prebuilt/AOXP/app/GmsCore.apk:system/app/GmsCore.apk \
+    vendor/cm/prebuilt/AOXP/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
+    vendor/cm/prebuilt/AOXP/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
+    vendor/cm/prebuilt/AOXP/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
+    vendor/cm/prebuilt/AOXP/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
+    vendor/cm/prebuilt/AOXP/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
+    vendor/cm/prebuilt/AOXP/app/NovaLauncher.apk:system/app/NovaLauncher.apk \
+    vendor/cm/prebuilt/AOXP/app/Phonesky.apk:system/app/Phonesky.apk \
+    vendor/cm/prebuilt/AOXP/app/SetupWizard.apk:system/app/SetupWizard.apk \
+    vendor/cm/prebuilt/AOXP/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk \
+    vendor/cm/prebuilt/AOXP/etc/g.prop:system/etc/g.prop \
+    vendor/cm/prebuilt/AOXP/etc/hosts:system/etc/hosts \
+    vendor/cm/prebuilt/AOXP/etc/init.d/97zipalign:system/etc/init.d/97zipalign \
+    vendor/cm/prebuilt/AOXP/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
+    vendor/cm/prebuilt/AOXP/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+    vendor/cm/prebuilt/AOXP/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
+    vendor/cm/prebuilt/AOXP/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
+    vendor/cm/prebuilt/AOXP/etc/permissions/features.xml:system/etc/permissions/features.xml \
+    vendor/cm/prebuilt/AOXP/etc/preferred-apps/google.xml:system/etc/preferred-apps/google.xml \
+    vendor/cm/prebuilt/AOXP/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+    vendor/cm/prebuilt/AOXP/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
+    vendor/cm/prebuilt/AOXP/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
+    vendor/cm/prebuilt/AOXP/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/cm/prebuilt/AOXP/xbin/zipalign:system/xbin/zipalign
+
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
 
@@ -146,13 +172,11 @@ PRODUCT_PACKAGES += \
 # Optional CM packages
 PRODUCT_PACKAGES += \
     VoicePlus \
-    VoiceDialer \
     SoundRecorder \
     Basic
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    Trebuchet \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
