@@ -142,7 +142,6 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/AOXP/app/NovaLauncher.apk:system/app/NovaLauncher.apk \
     vendor/cm/prebuilt/AOXP/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/cm/prebuilt/AOXP/app/SetupWizard.apk:system/app/SetupWizard.apk \
-    vendor/cm/prebuilt/AOXP/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk \
     vendor/cm/prebuilt/AOXP/etc/g.prop:system/etc/g.prop \
     vendor/cm/prebuilt/AOXP/etc/hosts:system/etc/hosts \
     vendor/cm/prebuilt/AOXP/etc/init.d/97zipalign:system/etc/init.d/97zipalign \
